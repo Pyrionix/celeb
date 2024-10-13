@@ -1,0 +1,90 @@
+
+body {
+    background-color: #A0005F;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+header {
+  /* margin-top: 28px; */
+  /* height: 800px; */
+  max-width: 1920px;
+  block-size: 800px;
+  background: radial-gradient(#F5FBFF, #C9E7FF);
+}
+
+.header-background {
+  margin: 0;
+}
+
+.logo-row {
+  width: 168px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 100%;
+  /* height: 150px; */
+  margin-top: 28px;
+  text-align: center;
+}
+
+.navbar-row {
+  max-width: 1340px;
+  width: 93%;
+  margin: 0 auto;
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  margin-top: 28px;
+  max-width: 1340px;
+  width: 93%;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  /* float: left; */
+  display: block;
+  border: solid 4px black;
+  border-radius: 16px;
+  background-color: #FFA332;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'ZapusSansRegular';
+  font-weight: bold;
+}
+
+.celeb-row {
+  width: 912.5px;
+  margin-top: 120px;
+}
+
+.celeb {
+  width: 100%;
+}
+
+.bg-row {
+  /* position: absolute; */
+  max-width: 1920px;
+  width: 133.3%;
+  margin-top: 120px;
+}
+
+.bg {
+  width: 100%;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+
