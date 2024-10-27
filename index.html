@@ -5,31 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="src/style.css" />
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="https://fontlibrary.org//face/zapus-sans"
-      type="text/css"
-    />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/zapus-sans" type="text/css"/>
   </head>
   <body>
+    
     <div class="navbar-row">
       <div class="navbar">
         <a href="#"><img src="src/music.svg" alt="music" /></a>
         <a href="#">Заказать видео</a>
       </div>
     </div>
-    <header>
-      <div class="logo-row">
-        <img src="src/logo.svg" alt="logo" class="logo" />
+
+    <div id="grid">
+
+      <div id="header">
+
+        <div class="logo-row">
+          <img src="src/logo.svg" alt="logo" class="logo" />
+        </div>  
+
+        <img src="src/bg.svg" alt="background" class="header-bg">
+
+        <div class="fire">
+          <img src="src/fire1.svg" alt="fire1" class="fire1">
+          <img src="src/fire2.svg" alt="fire2" class="fire2">
+          <img src="src/fire3.svg" alt="fire3" class="fire3">
+          <img src="src/fire4.svg" alt="fire4" class="fire4">
+          <img src="src/fire5.svg" alt="fire4" class="fire5">
+        </div>
+
+        <div>
+          <img src="src/candle1.svg" alt="candle" class="candle1">
+          <img src="src/candle2.svg" alt="candle" class="candle2">
+        </div>
+        <!-- <img src="src/character.svg" alt="character" class="character"> -->
+
       </div>
-      <div class="celeb-row">
-        <img src="src/celeb.svg" alt="celeb" class="celeb" />
+
+      <div id="main">
+
+        <div class="text">
+          <p class="celeb-text">
+            <span id="CELEB">Я CELEB —</span> чат-бот, который поможет тебе
+            заказать персональное видео у любимых
+            селебрити ко дню рождения или по любому
+            другому поводу
+          </p>
+          <p class="celeb-text">
+            Заполни короткую анкету
+            <span id="CELEB">и получи результат!</span>
+          </p>
+          <a class="order-btn" href="#">Заказать видео</a>
+        </div>
+
+        <footer>
+          <div class="char-row">
+            <img src="src/char.svg" alt="char" class="char"/>
+          </div>    
+
+          <div class="footer">
+            <p class="footer-text"><a class="footer-text" href="#">Оферта</a> и <a class="footer-text" href="#">условия</a></p>
+            <a class="footer-text" href="#">Конфиденциальность</a>
+            <p class="rights">© CELEB 2024 Все права защищены</p>
+          </div>
+
+          <div class="footer-bg">
+            <img src="src/footer-bg.svg" alt="footer"/>
+          </div>    
+
+        </footer>
       </div>
-      <div class="bg-row">
-        <img src="src/background.svg" alt="" class="bg" />
-      </div>
+    </div>
+    
     </header>
-    <div class="mains"></div>
   </body>
 </html>

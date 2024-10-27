@@ -1,32 +1,41 @@
-
 body {
-    background-color: #A0005F;
+    background-color: black;
     max-width: 1920px;
     margin: 0 auto;
+    z-index: 0;
 }
 
-header {
-  /* margin-top: 28px; */
-  /* height: 800px; */
-  max-width: 1920px;
-  block-size: 800px;
-  background: radial-gradient(#F5FBFF, #C9E7FF);
+@font-face {
+  font-family: zapus-bold;
+  src: url(zapus-sans-bold.ttf);
 }
 
-.header-background {
-  margin: 0;
+#header {
+  display: block;
+  width: 1440px;
+  /* min-width: 1280px; */
+  height: 800px; 
+  /* background: radial-gradient(#F5FBFF, #C9E7FF); */
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(bg-gradient.svg);
 }
 
-.logo-row {
-  width: 168px;
-  margin: 0 auto;
-}
-
-.logo {
-  width: 100%;
-  /* height: 150px; */
-  margin-top: 28px;
-  text-align: center;
+#main {
+  /* display: block; */
+  position: absolute;
+  top: 800px;
+  left: 0; 
+  right: 0; 
+  margin-inline: auto; 
+  width: 1440px;
+  /* min-width: 1280px; */
+  height: 1180px; 
+  /* background: radial-gradient(#F5FBFF, #C9E7FF); */
+  background-color: #A0005F;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: top;
 }
 
 .navbar-row {
@@ -37,6 +46,7 @@ header {
 
 /* The navigation bar */
 .navbar {
+  z-index: 999;
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
   display: flex;
@@ -45,11 +55,13 @@ header {
   margin-top: 28px;
   max-width: 1340px;
   width: 93%;
+  animation-duration: 1s;
+  animation-name: appear;
+  animation-timing-function: ease-out;
 }
 
 /* Links inside the navbar */
 .navbar a {
-  /* float: left; */
   display: block;
   border: solid 4px black;
   border-radius: 16px;
@@ -58,33 +70,237 @@ header {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: 'ZapusSansRegular';
+  font-family: 'zapus-bold';
+}
+
+@keyframes appear {
+  0%   {margin-top: -100px;}
+  100% {margin-top: 28px;}
+}
+
+
+.text {
+  margin-top: 80px;
+}
+
+.celeb-text {
   font-weight: bold;
+  text-align: center;
+  font-size: 44px;
+  color: #ffffff;
+  width: 1004px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: auto;
+  font-family: zapus-bold;
 }
 
-.celeb-row {
-  width: 912.5px;
-  margin-top: 120px;
+.celeb-text:nth-child(2) {
+  margin-top: 32px;
+  width: 620px;
 }
 
-.celeb {
+.order-btn {
+  margin-top: 60px;
+  display: grid;
+  border: solid 4px black;
+  border-radius: 24px;
+  width: 281px;
+  height: 82px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-family: zapus-bold;
+  font-size: 24px;
+  text-decoration: none;
+  align-items: center;
+}
+
+#CELEB {
+  color: #ea7ec0;
+}
+
+.imgbox {
+  display: grid;
+  height: 100%;
+}
+
+.center-fit {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+
+.footer {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 41px;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: zapus-bold;
+  color: #fff;
+  font-size: 18px;
+  margin: auto;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.rights {
+  font-family: zapus-bold;
+  color: #CF6EA8;
+  margin-top: 8px;
+}
+
+.footer-bg {
+  position: absolute;
+  bottom: 91px;
+}
+
+.char-row {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.char {
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-row {
+  width: 168px;
+  margin: 0 auto;
+}
+
+.logo {
   width: 100%;
+  margin-top: 28px;
 }
 
-.bg-row {
-  /* position: absolute; */
-  max-width: 1920px;
-  width: 133.3%;
-  margin-top: 120px;
+.header-bg {
+  position: absolute;
+  top: 0;
+  z-index: 3;
 }
 
-.bg {
-  width: 100%;
+.candle1 {
+  position: relative;
+  left: 270px;
+  top: 370px;
+  z-index: 4;
+  animation-duration: 3s;
+  animation-name: rotate-candle1;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom;
 }
 
-/* Main content */
-.main {
-  margin-top: 30px; /* Add a top margin to avoid content overlay */
+.candle2 {
+  position: relative;
+  left: 1016px;
+  top: 358px;
+  z-index: 4;
+  animation-duration: 3s;
+  animation-name: rotate-candle2;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom;
 }
 
+@keyframes rotate-candle1 {
+  0%   {rotate: 0deg;}
+  50%  {rotate: 14deg;}
+  100% {rotate: 0deg;}
+}
 
+@keyframes rotate-candle2 {
+  0%   {rotate: -10deg;}
+  50%  {rotate: 4deg;}
+  100% {rotate: -10deg;}
+}
+
+.fire1 {
+  position: relative;
+  animation-duration: 3s;
+  animation-name: float-fire-1;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: 4;
+}
+
+.fire2 {
+  position: relative;
+  animation-duration: 3s;
+  animation-name: float-fire-2;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: 4;
+}
+
+.fire3 {
+  position: relative;
+  animation-duration: 3s;
+  animation-name: float-fire-3;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: 4;
+}
+
+.fire4 {
+  position: relative;
+  animation-duration: 3s;
+  animation-name: float-fire-4;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: 4;
+}
+
+.fire5 {
+  position: relative;
+  animation-duration: 3s;
+  animation-name: float-fire-5;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: 4;
+}
+
+/* @keyframes float-fire-1 {
+  0%   {left: 690px; top: 350px;}
+  50%  {left: 690px; top: 360px;}
+  100% {left: 690px; top: 350px;}
+} */
+
+@keyframes float-fire-1 {
+  0%   {left: 470px; top: 270px;}
+  100% {left: 470px; top: 270px;}
+}
+
+@keyframes float-fire-2 {
+  0%   {left: 395px; top: 175px;}
+  50%  {left: 395px; top: 185px;}
+  100% {left: 395px; top: 175px;}
+}
+
+@keyframes float-fire-3 {
+  0%   {left: 316px; top: 110px;}
+  50%  {left: 316px; top: 120px;}
+  100% {left: 316px; top: 110px;}
+}
+
+@keyframes float-fire-4 {
+  0%   {left: 245px; top: 180px;}
+  50%  {left: 245px; top: 190px;}
+  100% {left: 245px; top: 180px;}
+}
+
+@keyframes float-fire-5 {
+  0%   {left: 170px; top: 270px;}
+  50%  {left: 170px; top: 280px;}
+  100% {left: 170px; top: 270px;}
+}
